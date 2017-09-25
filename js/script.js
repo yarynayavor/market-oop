@@ -14,7 +14,7 @@ function Section(nameItem,imageSrc,weight,price,section) {
 	this.section=section;
 
 	this.showWeight = function() {
-		$('.weight').on('click',function(e){
+		$('.weight').last().on('click',function(){
             alert (weight+'gramm');
         });
 	}
