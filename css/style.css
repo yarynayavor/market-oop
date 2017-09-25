@@ -1,0 +1,386 @@
+body {
+	background: url("../img/wall.jpg") no-repeat center center fixed;
+	background-size: cover;
+	position: relative; 
+}
+
+.menu-navigation {
+	background-color: #fff;
+}
+
+.menu-navigation .logo {
+	width: 150px;
+	background: url("../img/logo.png") no-repeat;
+	background-size: 140px;
+	margin: 5px 20px;
+}
+
+.menu-navigation .section {
+	color:#007f00;
+	font-size: 18px;
+	font-family: 'Raleway', sans-serif;
+	padding: 20px;
+	transition: all 1.2s ease;
+	-webkit-transition: all 1.2s ease;
+}
+
+.menu-navigation .section:hover,
+.menu-navigation .section:active,
+.menu-navigation .section:focus {
+	background-color: #ccffcc;
+	transition: all 1.2s ease;
+	-webkit-transition: all 1.2s ease;
+	color:#00cc00;
+}
+
+.menu-navigation .col-md-8  {
+	display: flex;
+	justify-content: flex-end;
+}
+
+#banner {
+	padding-top:50px;
+	background: url("../img/background.jpg") no-repeat center center fixed;
+	background-size: cover;
+	height:100vh;
+	position: relative;
+}
+
+#banner h1 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 50px;
+	text-shadow: 1px 1px #fff;
+	color:#000;
+	position: absolute;
+	top: 32%;
+	left:22%;
+	background: rgba(256, 256, 256, 0.5);
+}
+
+#banner p {
+	font-family: 'Raleway', sans-serif;
+	font-size: 25px;
+	text-shadow: 1px 1px #fff;
+	color:#000;
+	background: rgba(256, 256, 256, 0.5);
+	position: absolute;
+	top: 46%;
+	left:22%;
+}
+
+#banner .link-down {
+	font-size: 80px;
+	position: absolute;
+	bottom: 0;
+	left:48%;
+	color:#000;
+	text-shadow: 1px 1px #fff;
+	transition: all 1.2s ease;
+	-webkit-transition: all 1.2s ease;
+}
+
+#banner .link-down:hover {
+	font-size: 82px;
+	transition: all 1.2s ease;
+	-webkit-transition: all 1.2s ease;
+}
+
+.section-main { 
+	padding-top:15px;
+	color: #000; 
+	background-color: #fff;
+	opacity: 0.8;
+	border-bottom:2px solid green;
+	outline: none;
+}
+
+.section-main .line {
+	width: 400px;
+	height: 85px;
+	/*padding: 25px;*/
+	background: url("../img/line.png") no-repeat;
+	background-size: 100%;
+	margin: 30px auto 10px;
+	text-align: center;
+}
+
+.section-main h2   {
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-size: 45px;
+	margin: 50px auto 30px;
+}
+
+#fruits h2{
+	border-top: 2px solid #ff5319;
+	border-bottom: 2px solid #ff5319;
+	text-shadow: 1px 1px #ff5319;
+	width: 150px;
+}
+
+#vegetables h2{
+	border-top: 2px solid #2700ff;
+	border-bottom: 2px solid #2700ff;
+	text-shadow: 1px 1px #2700ff;
+	width: 260px;
+}
+
+#dairy h2 {
+	border-top: 2px solid #e5db00;
+	border-bottom: 2px solid #e5db00;
+	text-shadow: 1px 1px #e5db00;
+	width: 150px;
+}
+
+#meat-fish h2 {
+	border-top: 2px solid #e50000;
+	border-bottom: 2px solid #e50000;
+	text-shadow: 1px 1px #e50000;
+	width: 250px;
+}
+
+#fruits-list img,
+#vegetables-list img,
+#dairy-list img,
+#meat-fish-list img {
+	width: 200px;
+}
+
+#fruits-list,
+#vegetables-list,
+#dairy-list, #meat-fish-list {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+#fruits-list li,#vegetables-list li,
+#dairy-list li, #meat-fish-list li {
+	margin-left: 25px;
+	margin-bottom: 20px;
+	list-style: none;
+	border-radius: 10px;
+	padding: 15px;
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+}
+
+#fruits-list li {
+	border:1px solid #ff5319;
+}
+
+#vegetables-list li {
+	border:1px solid #2700ff;
+}
+
+#dairy-list li {
+	border:1px solid #e5db00;
+}
+
+#meat-fish-list li {
+	border:1px solid #e50000;
+}
+
+#fruits-list li p.name  {
+	color:#ff5319;
+	text-shadow: 1px 1px 2px red;
+}
+
+#vegetables-list li p.name {
+	color:#2700ff;
+	text-shadow: 1px 1px 2px darkblue;
+}
+
+#dairy-list li p.name {
+	color:#e5db00;
+	text-shadow: 1px 1px 2px yellow;
+}
+#meat-fish-list li p.name {
+	color:#e50000;
+	text-shadow: 1px 1px 2px darkred;
+}
+
+#fruits-list li p.name,#vegetables-list li p.name,
+#dairy-list li p.name,
+#meat-fish-list li p.name {
+	margin-top: 10px;
+	font-size: 20px;
+}
+
+#fruits-list li p.price {
+	color:#b23a11;
+}
+
+#vegetables-list li p.price {
+	color:#674cff;
+}
+
+#dairy-list li p.price {
+	color:#b7af00;
+}
+
+#meat-fish-list li p.price {
+	color:#ea3232;
+}
+
+#fruits-list li p.price,
+#vegetables-list li p.price,
+#dairy-list li p.price,
+#meat-fish-list li p.price {
+	font-size: 18px;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+#fruits-list li p.price span.weight,
+#vegetables-list li p.price span.weight,
+#dairy-list li p.price span.weight,
+#meat-fish-list li p.price span.weight {
+	margin-left: 10px;
+	font-size: 11px;
+	font-weight: normal;
+	/*display: none;*/
+	/*visibility: hidden;*/
+}
+
+#fruits-list li a.buy,#fruits-list li a.weight {
+	padding: 10px; 
+	background-color: #ff5319;
+	color:#fff;
+	border-radius: 5px;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+#fruits-list li a.buy:hover,#fruits-list li a.weight:hover,
+#fruits-list li a.buy:active,#fruits-list li a.weight:active,
+#fruits-list li a.buy:focus,#fruits-list li a.weight:focus {
+	text-decoration: none;
+	background-color: #ff865e;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+
+#vegetables-list li a.buy,#vegetables-list li a.weight {
+	padding: 10px; 
+	background-color: #2700ff;
+	color:#fff;
+	border-radius: 5px;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+#vegetables-list li a.buy:hover,#vegetables-list li a.weight:hover,
+#vegetables-list li a.buy:active,#vegetables-list li a.weight:active,
+#vegetables-list li a.buy:focus,#vegetables-list li a.weight:focus {
+	text-decoration: none;
+	background-color: #674cff;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+
+#dairy-list li a.buy,#dairy-list li a.weight {
+	padding: 10px; 
+	background-color: #b7af00;
+	color:#fff;
+	border-radius: 5px;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+#dairy-list li a.buy:hover,#dairy-list li a.weight:hover,
+#dairy-list li a.buy:active,#dairy-list li a.weight:active,
+#dairy-list li a.buy:focus,#dairy-list li a.weight:focus {
+	text-decoration: none;
+	background-color: #e7de19;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+
+#meat-fish-list li a.buy,#meat-fish-list li a.weight {
+	padding: 10px; 
+	background-color: #e50000;
+	color:#fff;
+	border-radius: 5px;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+#meat-fish-list li a.buy:hover,#meat-fish-list li a.weight:hover,
+#meat-fish-list li a.buy:active,#meat-fish-list li a.weight:active,
+#meat-fish-list li a.buy:focus,#meat-fish-list li a.weight:focus {
+	text-decoration: none;
+	background-color: #ec4c4c;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+
+#fruits-list li a.buy,
+#vegetables-list li a.buy,
+#dairy-list li a.buy,
+#meat-fish-list li a.buy {
+	margin-right: 5px;
+}
+
+.footer {
+	padding-top:20px;
+	color: #000;
+	background-color: #fff;
+	text-align: center;
+	font-size: 20px;
+}
+
+.footer .fa.fa-heart {
+	color:red;
+}
+
+/*******************************/
+
+/*.pop-up-weight{
+	position: fixed;
+	width: 30%;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top:15%;
+	z-index: 100;
+}*/
+
+.box-weight {
+	height: 330px;
+	background: url("../img/weight.png") no-repeat;
+	background-color: #ccffcc;
+	background-size: 400px;
+	background-position: 50% 50%;
+	border-radius: 15px;
+	border:1px solid #fff;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;
+	position: relative;
+	-webkit-box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.1);
+}
+
+.box-weight img {
+	width: 150px;
+	position: absolute;
+	top:10%;
+	left:30%;
+}
+
+.box-weight span {
+	width: 90px;
+	background-color: #1A242E;
+	color:#7CFDFF;
+	font-weight: bold;
+	font-family: 'Raleway', sans-serif;
+	position: absolute;
+	right:21%;
+	bottom:32%;
+}
+
+.box-weight p {
+	font-size: 16px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+	margin-top: 10px;
+}
