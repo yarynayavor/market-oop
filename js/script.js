@@ -19,7 +19,12 @@ function Section(nameItem,imageSrc,weight,price,section) {
 		$('.weight').last().on('click',function(){
 			getWeightPopShow(imageSrc,weight);
 		});
-
+	}
+	this.showBuyMessage=function() {
+		$('.buy').last().on('click',function(){
+			alert("Bill for item: "+nameItem +"\n"+"Price: $ "+price);
+			//getWeightPopShow(imageSrc,weight);
+		});
 	}
 }
 
@@ -135,6 +140,7 @@ productsAll[23]=new Section("Fish","img/meat-fish/fish.png",1200,9.75,"Meat-Fish
 for (product in productsAll) {
 	productsAll[product].getItemsInSections();
 	productsAll[product].showWeight();
+	productsAll[product].showBuyMessage();
 }
 
 // Section.prototype.getName = function () {
