@@ -22,35 +22,18 @@ function Section(nameItem,imageSrc,weight,price,section) {
 	}
 	this.showBuyMessage=function() {
 		$('.buy').last().on('click',function(){
-			alert("Bill for item: "+nameItem +"\n"+"Price: $ "+price);
-			//getWeightPopShow(imageSrc,weight);
+			alert("Bill for item: "+nameItem +"\n"+"Price: $ "+price.toFixed(2));
+			document.getElementById('basket').style.display='block';
+			document.querySelector('#menu-list li:last-child').style.display='block';
+			if(!(checkDublicates(nameItem))) {
+				getBuyingProduct(nameItem,weight,section,price);
+			}
+			ifFifteenOrMore();
 		});
 	}
 }
 
 Section.prototype = new Market();
-
-var getWeightPopShow = function (imageSrc,weight) {
-	var popup=document.createElement('div');
-	popup.classList.add('pop-up-weight');
-	document.body.appendChild(popup);
-	var box=document.createElement('div');
-	box.classList.add('box-weight');
-	popup.appendChild(box);
-
-	var img=document.createElement('img');
-	img.setAttribute('src',imageSrc);
-	box.appendChild(img);
-
-	var span=document.createElement('span');
-	spanText=document.createTextNode((weight/1000).toFixed(2)+' kg');
-	span.appendChild(spanText);
-	box.appendChild(span);
-
-	setTimeout(function() { 
-		$('.pop-up-weight').fadeOut(500);
-	}, 1000);
-}
 
 Section.prototype.getItemsInSections = function () {
 	var listFruits = document.getElementById('fruits-list');
@@ -71,7 +54,7 @@ Section.prototype.getItemsInSections = function () {
 	newProduct.appendChild(nameProduct);
 
 	var productPrice=document.createElement('p');
-	var productPriceText = document.createTextNode('$ '+this.price); 
+	var productPriceText = document.createTextNode('$ '+this.price.toFixed(2)); 
 	productPrice.appendChild(productPriceText);
 	productPrice.classList.add('price');
 	var productWeight=document.createElement('span');
@@ -101,7 +84,7 @@ Section.prototype.getItemsInSections = function () {
 	if(this.section.toLowerCase()==='vegetables'){
 		listVegetables.appendChild(newProduct);
 	}
-    if(this.section.toLowerCase()==='dairy'){
+	if(this.section.toLowerCase()==='dairy'){
 		listDairy.appendChild(newProduct);
 	}
 	if(this.section.toLowerCase()==='meat-fish'){
@@ -141,37 +124,5 @@ for (product in productsAll) {
 	productsAll[product].getItemsInSections();
 	productsAll[product].showWeight();
 	productsAll[product].showBuyMessage();
+	console.log(productsAll[product].getSectionName());
 }
-
-// Section.prototype.getName = function () {
-// 	return `There are some ${this.nameItem}, weight is: ${this.weight}, price is: ${this.price} and SECTION: ${this.section}. `;
-// }
-
-// Section.prototype.getNavigation = function () {
-
-// 	var list = document.getElementById('menu-list');
-// 	var newSection = document.createElement('li');
-	
-
-//     var linkSection = document.createElement('a');
-// 	var linkSectionText = document.createTextNode(this.section); 
-// 	linkSection.appendChild(linkSectionText);
-// 	linkSection.classList.add('section'); 
-// 	if(this.section.toLowerCase()==='fruits'){
-// 		linkSection.setAttribute("href","#fruits");
-// 	}
-// 	if(this.section.toLowerCase()==='vegetables'){
-// 		linkSection.setAttribute("href","#vegetables");
-// 	}
-//     if(this.section.toLowerCase()==='dairy'){
-// 		linkSection.setAttribute("href","#dairy");
-// 	}
-// 	if(this.section.toLowerCase()==='meat-fish'){
-// 		linkSection.setAttribute("href","#meat-fish");
-// 	}
-
-// 	newSection.appendChild(linkSection); 
-
-// 	list.appendChild(newSection);
-   
-// }
